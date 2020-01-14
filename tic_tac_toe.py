@@ -53,7 +53,7 @@ while True:
     print("Please enter your valid move: ")
     user_input = int(input())
 
-    if user_input in total or user_input > 9:
+    if user_input in total or user_input > 9 or user_input <= 0:
         print("Kindly enter a move which is not used.")
         continue
     # it is the logic for the implementation and registering of input the user gave.
