@@ -1,5 +1,6 @@
 import time
 import random
+from tkinter import *
 
 # asks for the sign from user
 print("Which sign do you want to have ? x or o")
@@ -82,18 +83,27 @@ while True:
     if num_1 == num_2 == num_3 == user_sign or num_4 == num_5 == num_6 == user_sign or num_7 == num_8 == num_9 == user_sign or num_1 == num_4 == num_7 == user_sign or \
                                     num_2 == num_5 == num_8 == user_sign or num_3 == num_6 == num_9 == user_sign or num_1 == num_5 == num_9 == user_sign or num_3 == num_5 == num_7 == user_sign:
         print("The user wins. \n ----- CONGRATULATIONS -----")
+        windw = Tk()
+        messagebox.showinfo("----- CONGRATULATIONS -----", "you are the winner.")
+        windw.mainloop()
         print(tic_tac())
         break
 
     if num_1 == num_2 == num_3 == computer_sign or num_4 == num_5 == num_6 == computer_sign or num_7 == num_8 == num_9 == computer_sign or num_1 == num_4 == num_7 == computer_sign or \
                                     num_2 == num_5 == num_8 == computer_sign or num_3 == num_6 == num_9 == computer_sign or num_1 == num_5 == num_9 == computer_sign or num_3 == num_5 == num_7 == computer_sign:
-        print("The computer wins. \n Better luck next time. ")
+        print("The computer wins. \n Better luck next time. ")            
+        windw = Tk()
+        messagebox.showinfo("Better luck next time. ", "The computer wins.")
+        windw.mainloop()
         print(tic_tac())
         break
 
     # checks for the tie.
     if len(total) == 9:
-        print("THE GAME HAS BEEN TIED.")
+        #print("THE GAME HAS BEEN TIED.")
+        windw = Tk()
+        messagebox.showinfo("TIED!", "THE GAME HAS BEEN TIED.")
+        windw.mainloop()
         print(tic_tac())
         break
 
@@ -139,12 +149,18 @@ while True:
         if num_1 == num_2 == num_3 == user_sign or num_4 == num_5 == num_6 == user_sign or num_7 == num_8 == num_9 == user_sign or num_1 == num_4 == num_7 == user_sign or \
                     num_2 == num_5 == num_8 == user_sign or num_3 == num_6 == num_9 == user_sign or num_1 == num_5 == num_9 == user_sign or num_3 == num_5 == num_7 == user_sign:
             print("The user wins. \n ----- CONGRATULATIONS -----")
+            windw = Tk()
+            messagebox.showinfo("----- CONGRATULATIONS -----", "you are the winner.")
+            windw.mainloop()
             print(tic_tac())
             break
 
         if num_1 == num_2 == num_3 == computer_sign or num_4 == num_5 == num_6 == computer_sign or num_7 == num_8 == num_9 == computer_sign or num_1 == num_4 == num_7 == computer_sign or \
                     num_2 == num_5 == num_8 == computer_sign or num_3 == num_6 == num_9 == computer_sign or num_1 == num_5 == num_9 == computer_sign or num_3 == num_5 == num_7 == computer_sign:
             print("The computer wins. \n Better luck next time. ")
+            windw = Tk()
+            messagebox.showinfo("Better luck next time. ", "The computer wins.")
+            windw.mainloop()
             print(tic_tac())
             break
 
